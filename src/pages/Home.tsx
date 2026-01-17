@@ -4,6 +4,7 @@ import { FeatureCards } from '../components/sections/FeatureCards'
 import { AIFeatures } from '../components/sections/AIFeatures'
 import { PrivacyFeatures } from '../components/sections/PrivacyFeatures'
 import { HowItWorks } from '../components/sections/HowItWorks'
+import { DownloadSection } from '../components/sections/DownloadSection'
 import { FinalCTA } from '../components/sections/FinalCTA'
 
 export default function Home() {
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* How It Works - Simple process explanation */}
       <HowItWorks />
+
+      {/* Download Section - Get the app */}
+      <DownloadSection />
 
       {/* Final CTA - Drive conversions */}
       <FinalCTA />
