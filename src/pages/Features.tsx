@@ -13,6 +13,7 @@ import {
   Globe,
   ArrowRight,
 } from 'lucide-react'
+import { FeaturePhoneMockup } from '../components/sections/FeaturePhoneMockup'
 
 const mainFeatures = [
   {
@@ -26,6 +27,7 @@ const mainFeatures = [
       'Background recording support',
       'Automatic file organization',
     ],
+    mockupVariant: 'recording' as const,
   },
   {
     icon: FileText,
@@ -38,6 +40,7 @@ const mainFeatures = [
       'Speaker identification',
       'Searchable transcripts',
     ],
+    mockupVariant: 'transcription' as const,
   },
   {
     icon: Sparkles,
@@ -50,6 +53,7 @@ const mainFeatures = [
       'Contact mention identification',
       'Action item highlighting',
     ],
+    mockupVariant: 'extraction' as const,
   },
 ]
 
@@ -154,10 +158,8 @@ export default function Features() {
                   ))}
                 </ul>
               </div>
-              <div className="flex-1 w-full">
-                <div className="glass rounded-2xl p-8 aspect-video flex items-center justify-center">
-                  <feature.icon className="text-primary/30" size={120} />
-                </div>
+              <div className="flex-1 w-full flex items-center justify-center">
+                <FeaturePhoneMockup variant={feature.mockupVariant} />
               </div>
             </div>
           ))}

@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 7%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 10%;
-  --card-foreground: 0 0% 98%;
-  --primary: 217 91% 60%;
-  --primary-foreground: 0 0% 100%;
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 65%;
-  --border: 0 0% 20%;
+  --background: #0a0a0a;
+  --background-secondary: #111111;
+  --background-tertiary: #1a1a1a;
+  --foreground: #ffffff;
+  --foreground-secondary: #9ca3af;
+  --foreground-muted: #6b7280;
+  --accent-blue: #3B82F6;
+  --accent-green: #10B981;
+  --accent-yellow: #F59E0B;
+  --accent-purple: #8B5CF6;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-visible: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -24,18 +27,40 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(220 20% 10%) 100%);
-  color: hsl(var(--foreground));
+  background: var(--background);
+  color: var(--foreground);
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Glass morphism utility */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-subtle);
+}
+
+.glass-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-visible);
+}
+
+/* Card with lift effect */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Gradient text */
@@ -46,9 +71,95 @@ body {
   background-clip: text;
 }
 
+.gradient-text-animated {
+  background: linear-gradient(90deg, #3B82F6, #60A5FA, #93C5FD, #60A5FA, #3B82F6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* 3D Perspective for mockups */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.mockup-3d {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-10deg);
+  transition: transform 0.5s ease;
+}
+
+.mockup-3d:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-5deg);
+}
+
+/* Section label dot */
+.section-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.section-dot-blue { background-color: var(--accent-blue); }
+.section-dot-green { background-color: var(--accent-green); }
+.section-dot-yellow { background-color: var(--accent-yellow); }
+.section-dot-purple { background-color: var(--accent-purple); }
+
 /* Smooth transitions */
 .transition-smooth {
   transition: all 0.3s ease;
+}
+
+/* Button glow effect */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
+}
+
+/* Hero background glow */
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* Section padding responsive */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 /* Legal document styles */
@@ -74,4 +185,15 @@ body {
 
 .legal-content a {
   @apply text-primary hover:underline;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
