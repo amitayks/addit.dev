@@ -137,7 +137,7 @@ export function DownloadSection() {
                 <AppStoreBadge />
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.addit"
+                href="https://play.google.com/store/apps/details?id=com.keisar.addit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block transition-transform hover:scale-105"
