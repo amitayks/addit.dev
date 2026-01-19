@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import Layout from './components/layout/Layout'
@@ -19,7 +19,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
         </Routes>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
