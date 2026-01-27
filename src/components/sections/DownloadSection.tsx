@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Star, Shield, Smartphone, Download, Check, Zap } from 'lucide-react'
+import { Star, Shield, Smartphone, Download, Check, Zap, Users, ExternalLink } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { SectionLabel } from '../ui/SectionLabel'
 import { fadeInUp, staggerContainer } from '../../lib/animations'
@@ -122,6 +122,39 @@ export function DownloadSection() {
             >
               Start recording and transcribing your calls today. Available on iOS and Android with all features included.
             </motion.p>
+
+            {/* Closed Testing Notice */}
+            <motion.div
+              variants={fadeInUp}
+              className="mb-8 p-4 rounded-xl bg-accent-yellow/10 border border-accent-yellow/20"
+            >
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent-yellow/20 flex items-center justify-center flex-shrink-0">
+                  <Users size={20} className="text-accent-yellow" />
+                </div>
+                <div>
+                  <h4 className="text-white font-medium mb-1">Closed Testing Program</h4>
+                  <p className="text-sm text-foreground-secondary mb-3">
+                    Addit is currently in closed testing. To get access:
+                  </p>
+                  <ol className="text-sm text-foreground-secondary space-y-2 list-decimal list-inside">
+                    <li>
+                      <a
+                        href="https://groups.google.com/u/5/g/addit-dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-blue hover:text-accent-blue/80 inline-flex items-center gap-1"
+                      >
+                        Join our Google Group
+                        <ExternalLink size={12} />
+                      </a>
+                    </li>
+                    <li>Click the <span className="text-white font-medium">"Become a Tester"</span> link in the first message</li>
+                    <li>Download the app from Google Play</li>
+                  </ol>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Download buttons */}
             <motion.div

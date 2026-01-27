@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -62,6 +62,27 @@ export function Button({
   }
 
   if (href) {
+    // Handle internal anchor links with smooth scroll
+    if (href.startsWith('#')) {
+      const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault()
+        const element = document.querySelector(href)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+      return (
+        <motion.a
+          href={href}
+          className={baseClasses}
+          {...motionProps}
+          onClick={handleClick}
+        >
+          {children}
+        </motion.a>
+      )
+    }
+
     return (
       <motion.a
         href={href}

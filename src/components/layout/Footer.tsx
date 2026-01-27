@@ -68,6 +68,20 @@ export default function Footer() {
                         >
                           {link.name}
                         </Link>
+                      ) : link.href.startsWith('#') ? (
+                        <a
+                          href={link.href}
+                          onClick={(e) => {
+                            e.preventDefault()
+                            const element = document.querySelector(link.href)
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' })
+                            }
+                          }}
+                          className="text-foreground-secondary hover:text-white transition-colors text-sm"
+                        >
+                          {link.name}
+                        </a>
                       ) : (
                         <a
                           href={link.href}
