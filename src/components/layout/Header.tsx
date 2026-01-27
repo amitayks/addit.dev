@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Download } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { Button } from '../ui/Button'
-import logoWhite from '../../assets/app-icon-white-noBackgroud.png'
+import { AdditLogo } from '../ui/AdditLogo'
 
 const navLinks = [
   { name: 'Features', href: '/features' },
@@ -53,9 +53,9 @@ export default function Header() {
       <Container>
         <nav className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logoWhite} alt="Addit" className="w-8 h-8 object-contain" />
-            <span className="text-white font-semibold text-xl">Addit</span>
+          <Link to="/" className="flex items-center gap-2 text-white">
+            <AdditLogo size={32} />
+            <span className="font-semibold text-xl">Addit</span>
           </Link>
 
           {/* Desktop Navigation */}

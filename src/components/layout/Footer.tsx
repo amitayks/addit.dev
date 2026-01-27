@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { Github, Twitter, Mail } from 'lucide-react'
-import logoWhite from '../../assets/app-icon-white-noBackgroud.png'
+import { AdditLogo } from '../ui/AdditLogo'
 
 const footerLinks = {
   Product: [
@@ -32,9 +32,9 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="col-span-2">
-              <Link to="/" className="flex items-center gap-2 mb-4">
-                <img src={logoWhite} alt="Addit" className="w-8 h-8 object-contain" />
-                <span className="text-white font-semibold text-xl">Addit</span>
+              <Link to="/" className="flex items-center gap-2 mb-4 text-white">
+                <AdditLogo size={32} />
+                <span className="font-semibold text-xl">Addit</span>
               </Link>
               <p className="text-foreground-secondary text-sm max-w-xs mb-6">
                 AI-powered call recording and transcription. Privacy-first, always.
