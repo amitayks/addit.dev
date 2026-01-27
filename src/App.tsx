@@ -8,11 +8,22 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    // If there's a hash, scroll to the element
+    if (hash) {
+      // Small delay to ensure the DOM is ready
+      setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
 
   return null
 }

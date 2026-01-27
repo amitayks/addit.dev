@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { Github, Twitter, Mail } from 'lucide-react'
 import { AdditLogo } from '../ui/AdditLogo'
@@ -25,6 +25,21 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleAnchorClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault()
+    if (location.pathname !== '/') {
+      navigate('/' + href)
+      return
+    }
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="border-t border-white/5 bg-background">
       <Container>
@@ -71,13 +86,7 @@ export default function Footer() {
                       ) : link.href.startsWith('#') ? (
                         <a
                           href={link.href}
-                          onClick={(e) => {
-                            e.preventDefault()
-                            const element = document.querySelector(link.href)
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' })
-                            }
-                          }}
+                          onClick={(e) => handleAnchorClick(e, link.href)}
                           className="text-foreground-secondary hover:text-white transition-colors text-sm"
                         >
                           {link.name}

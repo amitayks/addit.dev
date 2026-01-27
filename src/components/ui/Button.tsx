@@ -1,5 +1,5 @@
 import { ReactNode, MouseEvent } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 interface ButtonProps {
@@ -35,6 +35,9 @@ export function Button({
   className = '',
   disabled = false,
 }: ButtonProps) {
+  const location = useLocation()
+  const navigate = useNavigate()
+
   const baseClasses = `
     inline-flex items-center justify-center gap-2
     font-medium rounded-lg
@@ -66,6 +69,14 @@ export function Button({
     if (href.startsWith('#')) {
       const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
+
+        // If not on home page, navigate to home first with the hash
+        if (location.pathname !== '/') {
+          navigate('/' + href)
+          return
+        }
+
+        // On home page, just scroll to the element
         const element = document.querySelector(href)
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' })
