@@ -3,7 +3,7 @@ import { Sparkles, Download, ArrowRight } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { Button } from '../ui/Button'
 import { fadeInUp, staggerContainer } from '../../lib/animations'
-import { AppMockup } from './AppMockup'
+import { PhoneMockup } from '../phone-mockup'
 
 export function Hero() {
   return (
@@ -63,14 +63,16 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* App mockup */}
+          {/* Animated phone mockup */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative flex justify-center lg:justify-end"
           >
-            <AppMockup />
+            <div className="scale-[0.65] sm:scale-75 lg:scale-[0.85] origin-top">
+              <PhoneMockup />
+            </div>
           </motion.div>
         </div>
       </Container>

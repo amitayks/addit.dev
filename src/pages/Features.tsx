@@ -13,7 +13,9 @@ import {
   Globe,
   ArrowRight,
 } from 'lucide-react'
-import { FeaturePhoneMockup } from '../components/sections/FeaturePhoneMockup'
+import { TranscriptionMockup } from '../components/transcription-mockup'
+import { SocialMockup } from '../components/social-mockup'
+import { ActionsMockup } from '../components/actions-mockup'
 
 const mainFeatures = [
   {
@@ -159,7 +161,13 @@ export default function Features() {
                 </ul>
               </div>
               <div className="flex-1 w-full flex items-center justify-center">
-                <FeaturePhoneMockup variant={feature.mockupVariant} />
+                {index === 0 ? (
+                  <TranscriptionMockup />
+                ) : index === 1 ? (
+                  <SocialMockup />
+                ) : (
+                  <ActionsMockup />
+                )}
               </div>
             </div>
           ))}
