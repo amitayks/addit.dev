@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import {
   Mic,
   FileText,
@@ -160,7 +161,13 @@ export default function Features() {
                   ))}
                 </ul>
               </div>
-              <div className="flex-1 w-full flex items-center justify-center">
+              <motion.div
+                className="flex-1 w-full flex items-center justify-center"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-100px' }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
                 {index === 0 ? (
                   <TranscriptionMockup />
                 ) : index === 1 ? (
@@ -168,7 +175,7 @@ export default function Features() {
                 ) : (
                   <ActionsMockup />
                 )}
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
