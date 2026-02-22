@@ -38,6 +38,14 @@
   </style>
 </head>
 <body>
+  <script>
+    // Redirect real browsers to the SPA for the full styled experience.
+    // Bots and crawlers that don't execute JS will read the static content below.
+    try {
+      sessionStorage.setItem('redirect', window.location.href);
+      window.location.replace('/');
+    } catch(e) {}
+  </script>
   <div class="container">
     <header>
       <a href="/">&larr; addit.dev</a>

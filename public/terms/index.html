@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - Addit</title>
+  <meta name="description" content="Addit Terms of Service - the agreement governing your use of the app." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #cbd5e1; line-height: 1.7; padding: 2rem 1rem; }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { margin-bottom: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 1.5rem; }
+    header a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+    header a:hover { color: #fff; }
+    h1 { font-size: 2rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.25rem; }
+    .updated { color: #64748b; font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin: 2rem 0 0.75rem; padding-top: 1rem; border-top: 1px solid #1e293b; }
+    h3 { font-size: 1rem; font-weight: 600; color: #cbd5e1; margin: 1.25rem 0 0.5rem; }
+    h4 { font-size: 0.95rem; font-weight: 600; color: #94a3b8; margin: 1rem 0 0.4rem; }
+    p { margin-bottom: 0.85rem; }
+    ul, ol { margin: 0.5rem 0 0.85rem 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: #e2e8f0; }
+    .warning { background: rgba(120,53,15,0.3); border: 1px solid #92400e; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+    .warning strong { color: #fbbf24; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 1rem; padding: 2.5rem; }
+    @media (max-width: 640px) { .card { padding: 1.25rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <script>
+    // Redirect real browsers to the SPA for the full styled experience.
+    // Bots and crawlers that don't execute JS will read the static content below.
+    try {
+      sessionStorage.setItem('redirect', window.location.href);
+      window.location.replace('/');
+    } catch(e) {}
+  </script>
+  <div class="container">
+    <header><a href="/">&larr; addit.dev</a></header>
+    <div class="card">
+      <h1>Terms of Service</h1>
+      <p class="updated">Last updated: January 16, 2026</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>Welcome to Addit. These Terms of Service ("Terms," "Agreement") constitute a legally binding agreement between you ("User," "you," "your") and Addit ("Company," "we," "us," "our") governing your access to and use of the Addit mobile application ("App," "Service").</p>
+      <p><strong>BY DOWNLOADING, INSTALLING, ACCESSING, OR USING THE APP, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS.</strong> If you do not agree to these Terms, do not download, install, or use the App.</p>
+
+      <h2>2. Eligibility and Age Requirements</h2>
+      <h3>2.1 Minimum Age</h3>
+      <p><strong>The App is intended for users who are at least 17 years of age (18 in some jurisdictions).</strong> By using the App, you represent and warrant that you meet the minimum age requirement in your jurisdiction.</p>
+      <h3>2.2 Legal Capacity</h3>
+      <p>You represent and warrant that you have the legal capacity to enter into this Agreement.</p>
+      <h3>2.3 Geographic Restrictions</h3>
+      <p>The App is available in countries where call recording applications are permitted. You are responsible for compliance with local laws and regulations.</p>
+
+      <h2>3. Description of Service</h2>
+      <p>Addit provides: Call Recording, Voice Memos, AI-powered Transcription (via Deepgram/Gladia), AI Extraction of calendar events/reminders/contacts (via OpenAI/Google Gemini), Local Storage, and Search across recordings and transcriptions. All data is stored locally on your device.</p>
+
+      <h2>4. Call Recording — Legal Compliance</h2>
+      <div class="warning">
+        <p><strong>CRITICAL LEGAL WARNING — READ CAREFULLY</strong></p>
+        <p>Call recording laws vary significantly by jurisdiction. Recording phone calls without proper authorization or consent may be a criminal offense. <strong>YOU ARE SOLELY RESPONSIBLE FOR ENSURING YOUR USE OF CALL RECORDING COMPLIES WITH ALL APPLICABLE LAWS.</strong></p>
+      </div>
+      <h3>4.1 User Responsibility</h3>
+      <p>You acknowledge that you are solely responsible for understanding and complying with all applicable laws regarding call recording, obtaining all necessary consents, and assuming all risk and liability associated with your use of call recording features.</p>
+      <h3>4.2 Two-Party Consent Jurisdictions</h3>
+      <p><strong>U.S. Two-Party Consent States:</strong> California, Connecticut, Delaware, Florida, Illinois, Maryland, Massachusetts, Michigan, Montana, Nevada, New Hampshire, Pennsylvania, Washington.</p>
+      <p><strong>International All-Party Consent Jurisdictions include:</strong> Germany, Spain, Canada, Australia, United Kingdom, France, Italy, Japan, South Korea, Brazil, India, and EU (under GDPR).</p>
+      <p><strong>U.S. One-Party Consent States:</strong> All other U.S. states not listed above generally permit recording if one party consents (including the recorder). Always verify current laws in your jurisdiction.</p>
+      <h3>4.3 Cross-Jurisdictional Calls</h3>
+      <p>When parties are in different jurisdictions, the stricter law typically applies. We strongly recommend obtaining all-party consent for cross-jurisdictional calls.</p>
+      <h3>4.4 Disclaimer</h3>
+      <p><strong>ADDIT DOES NOT PROVIDE LEGAL ADVICE.</strong> Addit expressly disclaims any responsibility or liability for your compliance with applicable call recording laws. Consult a qualified attorney in your jurisdiction.</p>
+
+      <h2>5. API Key Management and Third-Party Services</h2>
+      <p>To use transcription and AI features, you must provide your own API keys. You are responsible for all charges incurred, keeping keys confidential, and complying with each provider's terms.</p>
+      <ul>
+        <li><strong>Deepgram:</strong> <a href="https://deepgram.com/terms" target="_blank" rel="noopener noreferrer">Terms</a> | <a href="https://deepgram.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+        <li><strong>Gladia:</strong> <a href="https://www.gladia.io/terms-of-use" target="_blank" rel="noopener noreferrer">Terms</a> | <a href="https://www.gladia.io/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+        <li><strong>OpenAI:</strong> <a href="https://openai.com/policies/terms-of-use" target="_blank" rel="noopener noreferrer">Terms</a> | <a href="https://openai.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+        <li><strong>Google Gemini:</strong> <a href="https://ai.google.dev/terms" target="_blank" rel="noopener noreferrer">Terms</a> | <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a></li>
+      </ul>
+
+      <h2>6. Prohibited Uses</h2>
+      <ul>
+        <li>Recording conversations without required consent or authorization</li>
+        <li>Recording for purposes of harassment, stalking, or intimidation</li>
+        <li>Using recordings to harm, threaten, blackmail, or coerce others</li>
+        <li>Reverse engineering, decompiling, or disassembling the App</li>
+        <li>Violating the acceptable use policies of integrated services</li>
+        <li>Creating recordings that are defamatory, obscene, or illegal</li>
+      </ul>
+
+      <h2>7. User Content and Intellectual Property</h2>
+      <p>You retain ownership of your recordings, transcriptions, and extracted data ("User Content"). You are solely responsible for ensuring you have the right to record and store the content, and for compliance with applicable laws. The App itself is owned by Addit and protected by copyright and other IP laws.</p>
+
+      <h2>8. Privacy</h2>
+      <p>Your use of the App is governed by our <a href="/privacy">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+
+      <h2>9. Disclaimer of Warranties</h2>
+      <p><strong>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong> We do not warrant that transcriptions or AI extractions will be accurate, or that the App will be available at all times or compatible with all devices.</p>
+
+      <h2>10. Limitation of Liability</h2>
+      <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ADDIT SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES</strong> arising from your use of the App, illegal recording, errors in transcriptions, or third-party services. Our total liability shall not exceed the amount you paid us in the preceding 12 months, or $100 USD, whichever is greater.</p>
+
+      <h2>11. Indemnification</h2>
+      <p>You agree to defend, indemnify, and hold harmless Addit from claims arising out of your use or misuse of the App, your violation of these Terms, any illegal recording you make, or your violation of any applicable law or third-party right.</p>
+
+      <h2>12. Dispute Resolution</h2>
+      <p>Contact us at <a href="mailto:legal@addit.dev">legal@addit.dev</a> before filing a formal legal claim. Unresolved disputes shall be resolved by binding arbitration under JAMS Streamlined Arbitration Rules. <strong>YOU AND ADDIT AGREE TO BRING CLAIMS ONLY IN AN INDIVIDUAL CAPACITY, NOT AS A CLASS MEMBER.</strong> You may opt out of arbitration within 30 days of first use by writing to <a href="mailto:legal@addit.dev">legal@addit.dev</a>.</p>
+
+      <h2>13. Governing Law</h2>
+      <p>These Terms are governed by the laws of the State of California, United States, without regard to conflict of law provisions. For matters not subject to arbitration, you consent to the jurisdiction of courts in California.</p>
+
+      <h2>14. Termination</h2>
+      <p>You may terminate by uninstalling the App and deleting all User Content. We may suspend or terminate your access at any time for violation of these Terms or illegal use.</p>
+
+      <h2>15. App Store Terms</h2>
+      <p>These Terms are between you and Addit, not Apple or Google. Apple and Google have no obligation regarding the App. You must comply with the applicable store's Terms of Service.</p>
+
+      <h2>16. Changes to Terms</h2>
+      <p>We may modify these Terms at any time. For material changes, we will provide 30 days' notice. Continued use constitutes acceptance of the modified Terms.</p>
+
+      <h2>17. Contact Information</h2>
+      <p><strong>General:</strong> <a href="mailto:support@addit.dev">support@addit.dev</a><br>
+      <strong>Legal:</strong> <a href="mailto:legal@addit.dev">legal@addit.dev</a><br>
+      <strong>Privacy:</strong> <a href="mailto:privacy@addit.dev">privacy@addit.dev</a></p>
+
+      <p style="margin-top:2rem; font-size:0.85rem; color:#475569;">These Terms of Service are effective as of January 16, 2026. By using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
+    </div>
+  </div>
+</body>
+</html>

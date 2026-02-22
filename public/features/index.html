@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features - Addit</title>
+  <meta name="description" content="Addit features: automatic call transcription, AI-powered insights, calendar events, reminders, and more." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #cbd5e1; line-height: 1.7; padding: 2rem 1rem; }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { margin-bottom: 2rem; border-bottom: 1px solid #1e293b; padding-bottom: 1.5rem; }
+    header a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; }
+    header a:hover { color: #fff; }
+    h1 { font-size: 2rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.5rem; }
+    .subtitle { color: #64748b; margin-bottom: 2rem; }
+    h2 { font-size: 1.15rem; font-weight: 600; color: #e2e8f0; margin: 1.75rem 0 0.5rem; }
+    p { margin-bottom: 0.75rem; }
+    ul { margin: 0.4rem 0 0.75rem 1.5rem; }
+    li { margin-bottom: 0.25rem; }
+    a { color: #60a5fa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    strong { color: #e2e8f0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1rem; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; padding: 1.5rem; }
+    .hero { background: #1e293b; border: 1px solid #334155; border-radius: 1rem; padding: 2.5rem; margin-bottom: 1.5rem; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .hero { padding: 1.25rem; } h1 { font-size: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <script>
+    // Redirect real browsers to the SPA for the full styled experience.
+    // Bots and crawlers that don't execute JS will read the static content below.
+    try {
+      sessionStorage.setItem('redirect', window.location.href);
+      window.location.replace('/');
+    } catch(e) {}
+  </script>
+  <div class="container">
+    <header><a href="/">&larr; addit.dev</a></header>
+    <div class="hero">
+      <h1>Features</h1>
+      <p class="subtitle">Everything Addit can do — automatically, on your device.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h2>High-Quality Recording</h2>
+        <p>Record phone calls and voice memos in crystal-clear quality. Background recording continues even when you switch apps.</p>
+        <ul>
+          <li>Call recording with caller ID</li>
+          <li>Voice memo recording</li>
+          <li>Background recording support</li>
+          <li>Automatic file organization</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>AI-Powered Transcription</h2>
+        <p>Convert speech to text automatically using industry-leading AI. Supports Deepgram and Gladia with 99+ languages.</p>
+        <ul>
+          <li>Accurate speech-to-text</li>
+          <li>Multiple language support</li>
+          <li>Speaker identification</li>
+          <li>Searchable transcripts</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Intelligent Extraction</h2>
+        <p>AI analyzes transcriptions and automatically extracts actionable items like calendar events, reminders, and contact information.</p>
+        <ul>
+          <li>Calendar event detection</li>
+          <li>Reminder extraction</li>
+          <li>Contact mention identification</li>
+          <li>Action item highlighting</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Privacy First</h2>
+        <p>All data stays on your device. No cloud storage, no servers. Use your own API keys for transcription and AI.</p>
+        <ul>
+          <li>100% local data storage</li>
+          <li>Your own API keys</li>
+          <li>No data sent to Addit servers</li>
+          <li>Hardware-encrypted key storage</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Smart Search</h2>
+        <p>Search across all your recordings and transcriptions using semantic AI-powered search or keyword lookup.</p>
+        <ul>
+          <li>Full-text transcript search</li>
+          <li>Semantic AI search</li>
+          <li>Filter by date or contact</li>
+          <li>Instant results</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Contact Integration</h2>
+        <p>Recordings are automatically linked to your contacts so you always know who you spoke with and what was discussed.</p>
+        <ul>
+          <li>Caller identification</li>
+          <li>Contact-based filtering</li>
+          <li>Auto-save new contacts from calls</li>
+          <li>Works with your existing contacts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
